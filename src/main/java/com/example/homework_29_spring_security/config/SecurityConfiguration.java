@@ -19,8 +19,8 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain getSFC(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.authorizeHttpRequests(request ->
-                        request.anyRequest().authenticated())
+        httpSecurity.authorizeHttpRequests(request -> request.anyRequest()
+                        .authenticated())
                 .formLogin()
                 .defaultSuccessUrl("/ping", true)
                 .and()
