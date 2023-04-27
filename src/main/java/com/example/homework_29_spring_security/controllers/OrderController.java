@@ -5,10 +5,7 @@ import com.example.homework_29_spring_security.entity.Product;
 import com.example.homework_29_spring_security.service.OrderService;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -56,8 +53,8 @@ public class OrderController {
         return orderService.getAllOrders();
     }
 
-/*    @PostMapping
-    public Order addOrder(@RequestBody Order order) {
+    @PostMapping
+    public Order addOrder(Order order) {
         return orderService.saveOrder(order);
-    }*/
+    }
 }
